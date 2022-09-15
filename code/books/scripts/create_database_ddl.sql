@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS cart (
+  cart_id CHARACTER VARYING(255) NOT NULL,
+  items TEXT,
+  CONSTRAINT cart_pkey PRIMARY KEY (cart_id)
+);

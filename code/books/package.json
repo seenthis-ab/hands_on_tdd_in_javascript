@@ -1,0 +1,35 @@
+{
+  "name": "books",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "predev": "./scripts/initdb.sh",
+    "dev": "POSTGRES_USER=developer POSTGRES_PASSWORD=secret POSTGRES_DB=books_test nodemon src/main.js",
+    "test": "POSTGRES_USER=developer POSTGRES_PASSWORD=secret POSTGRES_DB=books_test mocha --es-module-specifier-resolution=node --parallel ./src/**/*.test.js",
+    "watch": "POSTGRES_USER=developer POSTGRES_PASSWORD=secret POSTGRES_DB=books_test mocha --es-module-specifier-resolution=node --watch --parallel ./src/**/*.test.js",
+    "pretest:it": "./scripts/initdb.sh",
+    "test:it": "POSTGRES_USER=developer POSTGRES_PASSWORD=secret POSTGRES_DB=books_test mocha --es-module-specifier-resolution=node --watch --parallel ./test/**/*.test.js",
+    "prewatch:it": "./scripts/initdb.sh",
+    "watch:it": "POSTGRES_USER=developer POSTGRES_PASSWORD=secret POSTGRES_DB=books_test mocha --es-module-specifier-resolution=node --watch --parallel ./test/**/*.test.js",
+    "lint": "eslint ./src ./test",
+    "format": "prettier --write 'src/**/*.js' --write 'test/**/*.js'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.23.1",
+    "fastify": "^4.5.3",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1",
+    "sinon": "^14.0.0"
+  },
+  "dependencies": {
+    "@fastify/swagger": "^7.5.1",
+    "nanoid": "^4.0.0",
+    "pg": "^8.8.0"
+  }
+}
