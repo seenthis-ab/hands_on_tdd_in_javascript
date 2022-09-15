@@ -54,7 +54,7 @@ css: ./assets/styles.css
 }
 ```
 
-# Defining terminology
+# Testing code 
 
 ::: notes
 
@@ -375,3 +375,5 @@ from a public API and manages a shopping cart for those books.
 <div style="font-family: var(--r-heading-font); font-size: 4em; text-shadow: 0px 0px 80px #4889bf;">
 Thank You!
 </div>
+
+[https://github.com/seenthis-ab/hands_on_tdd_in_javascript](https://github.com/seenthis-ab/hands_on_tdd_in_javascript)
